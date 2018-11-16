@@ -1,0 +1,26 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+[class*=col-] {
+
+}
+
+#warn {
+	width: 25%;
+}
+
+#suc {
+	width: 50%;
+}
+
+#info {
+	width: 75%;
+}
+
+#media-pic {
+	width: 35%
+}
+
