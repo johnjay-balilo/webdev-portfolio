@@ -2,25 +2,96 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Jaldi', sans-serif;
 }
 
-[class*=col-] {
-
+html {
+	scroll-behavior: smooth;
+	overflow-x: hidden;
 }
 
-#warn {
-	width: 25%;
+body {
+	background-color: #faf2ef;
 }
 
-#suc {
-	width: 50%;
+#jumbo-div {
+	padding-top: 10%;
+	height: 100vh;
+	background: url(../images/bg.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	border-radius: 0; 
+	position: relative;
 }
 
-#info {
-	width: 75%;
+#port-jumbo {
+	border: 5px solid #3649aa;
+	width: 60%;
+	padding: 8em 4em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(250, 242, 239, 0.3);
 }
 
-#media-pic {
-	width: 35%
+.jumbotron h1 {
+	color: #333;
 }
 
+#about h3 {
+	background-color: #3649aa;
+	color: #efe6e1;
+}
+
+.btn {
+	background-color: #3649aa;
+}
+
+#carousel {
+	background-color: #b9a59e;
+}
+
+#dev-img {
+	border-radius: 50%;
+	border: 3px solid #333;
+	background-color: #333;
+	width: 60%;
+}
+
+.card {
+	background-color: #efe6e1;
+}
+
+footer {
+	background-color: #3649aa;
+}
+
+
+
+
+
+
+/*desktop styles*/
+@media only screen and (max-width: 540px) {
+	#port-jumbo {
+		padding: 4em 2em;
+	}
+
+	#port-jumbo h1 {
+		font-size: 250%;
+	}
+
+	#port-jumbo p {
+		font-size: 100%;
+	}
+
+	#port-jumbo a {
+		font-size: 75%;
+	}
+
+	#about h3 {
+		font-size: 170%;
+		padding: 5%;
+	}
+}
