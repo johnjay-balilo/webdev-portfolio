@@ -2,96 +2,343 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	font-family: 'Jaldi', sans-serif;
-}
-
-html {
-	scroll-behavior: smooth;
-	overflow-x: hidden;
+	font-family: 'Raleway', sans-serif;
 }
 
 body {
-	background-color: #faf2ef;
-}
-
-#jumbo-div {
-	padding-top: 10%;
-	height: 100vh;
 	background: url(../images/bg.jpg);
-	background-size: cover;
 	background-attachment: fixed;
-	border-radius: 0; 
-	position: relative;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+	max-height: 100vh;
+	overflow-y: hidden;
+
 }
 
-#port-jumbo {
-	border: 5px solid #3649aa;
-	width: 60%;
-	padding: 8em 4em;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: rgba(250, 242, 239, 0.3);
+#contents {
+	background-color: rgba(255, 255, 255, 0.5);
+	height: 80vh;
+	margin-top: 10vh;
+	width: 100%;
 }
 
-.jumbotron h1 {
-	color: #333;
+#left {
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 10vh;
+	height: 80vh;
 }
 
-#about h3 {
-	background-color: #3649aa;
-	color: #efe6e1;
+
+
+
+.jumbotron {
+	position: fixed;
+	width: 50%;
+	top: 20%;
+	left: 25%;
+	background-color: rgba(255, 255, 255, 0.6);
 }
 
-.btn {
-	background-color: #3649aa;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*nav radio and button controls*/
+input[type=radio] {
+	display: none;
 }
 
-#carousel {
-	background-color: #b9a59e;
+#chome,
+#cprojects,
+#cabout {
+	position: fixed;
 }
 
+
+input[id=home]:checked ~ #chome,
+input[id=projects]:checked ~ #cprojects,
+input[id=about]:checked ~ #cabout {
+	visibility: visible;
+	transition: 0.5s;
+}
+
+input[id=home]:not(:checked) ~ #chome,
+input[id=projects]:not(:checked) ~ #cprojects,
+input[id=about]:not(:checked) ~ #cabout {
+	visibility: hidden;
+	transition: 0.5s;
+}
+
+
+/*content home*/
+input[id=home]:checked ~ #chome .jumbotron {
+	animation-name: fadeInUp;
+	animation-duration: 0.5s;
+}
+
+input[id=home]:not(:checked) ~ #chome .jumbotron {
+	animation-name: fadeOutDown;
+	animation-duration: 0.5s;
+	animation-delay: 0.1s;
+}
+
+/*content projects*/
+input[id=projects]:checked ~ #cprojects .alvender {
+	animation-name: fadeInLeft;
+	animation-duration: 0.5s;
+}
+
+input[id=projects]:not(:checked) ~ #cprojects .alvender {
+	animation-name: fadeOutLeft;
+	animation-duration: 0.5s;
+	animation-delay: 0.1s;
+}
+
+input[id=projects]:checked ~ #cprojects .capstone2 {
+	animation-name: fadeInDown;
+	animation-duration: 0.5s;
+}
+
+input[id=projects]:not(:checked) ~ #cprojects .capstone2 {
+	animation-name: fadeOutDown;
+	animation-duration: 0.5s;
+	animation-delay: 0.1s;
+}
+
+input[id=projects]:checked ~ #cprojects .capstone3 {
+	animation-name: fadeInRight;
+	animation-duration: 0.5s;
+}
+
+input[id=projects]:not(:checked) ~ #cprojects .capstone3 {
+	animation-name: fadeOutRight;
+	animation-duration: 0.5s;
+	animation-delay: 0.1s;
+}
+
+/*content about*/
+input[id=about]:checked ~ #cabout h3 {
+	animation-name: fadeInDown;
+	animation-duration: 0.5s;
+}
+
+input[id=about]:not(:checked) ~ #cabout h3 {
+	animation-name: fadeOutUp;
+	animation-duration: 0.5s;
+	animation-delay: 0.1s;
+}
+
+input[id=about]:checked ~ #cabout .pic {
+	animation-name: fadeInLeft;
+	animation-duration: 0.5s;
+}
+
+input[id=about]:not(:checked) ~ #cabout .pic {
+	animation-name: fadeOutLeft;
+	animation-duration: 0.5s;
+	animation-delay: 0.1s;
+}
+
+input[id=about]:checked ~ #cabout .desc {
+	animation-name: fadeInRight;
+	animation-duration: 0.5s;
+}
+
+input[id=about]:not(:checked) ~ #cabout .desc {
+	animation-name: fadeOutRight;
+	animation-duration: 0.5s;
+	animation-delay: 0.1s;
+}
+
+.btn-dark {
+	width: 100%;
+	border-radius: 3px;
+	margin-bottom: 5vh;
+}
+
+.btn-dark:after {
+	content: "";
+	width: 0px;
+	height: 2px;
+	display: block;
+	background: white;
+	transition: 0.5s;
+}
+
+.btn-dark:hover:after {
+	width: 100%;
+}
+
+input[id=home]:checked ~ nav>label[for=home]>.btn:after,
+input[id=projects]:checked ~ nav>label[for=projects]>.btn:after,
+input[id=about]:checked ~ nav>label[for=about]>.btn:after {
+	width: 100%;
+	background: lightgrey;
+}
+
+nav > a:hover {
+	transform: scale(1.1);
+	transition: 0.3s;
+}
+
+/*nav end radio button controls*/
+
+
+
+
+
+
+/*about section*/
 #dev-img {
 	border-radius: 50%;
-	border: 3px solid #333;
-	background-color: #333;
-	width: 60%;
-}
 
-.card {
-	background-color: #efe6e1;
-}
-
-footer {
-	background-color: #3649aa;
 }
 
 
 
 
 
+/*tablet styles*/
+@media only screen and (max-width: 720px) {
+	#social2 {
+		position: fixed;
+		bottom: 0;
+		background-color: rgba(255, 255, 255, 0.3);
+		width: 75%;
+		left: 50%;
+		margin-left: -37.5%;
+	}
 
-/*desktop styles*/
+	#nav-top {
+		height: 10vh;
+		width: 100%;
+	}
+
+	.jumbotron {
+		width: 80%;
+		left: 10%;
+	}
+
+
+
+
+}
+
+/*mobile styles*/
 @media only screen and (max-width: 540px) {
-	#port-jumbo {
-		padding: 4em 2em;
+	#social2 {
+		position: fixed;
+		bottom: 0;
+		background-color: rgba(255, 255, 255, 0.3);
 	}
 
-	#port-jumbo h1 {
-		font-size: 250%;
+	#nav-top {
+		height: 10vh;
 	}
 
-	#port-jumbo p {
-		font-size: 100%;
+	.jumbotron {
+		width: 80%;
+		left: 10%;
 	}
 
-	#port-jumbo a {
-		font-size: 75%;
+	#cprojects .card{
+		margin-bottom: 5%;
 	}
 
-	#about h3 {
-		font-size: 170%;
-		padding: 5%;
+	#cprojects {
+		position: fixed;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		margin-bottom: 30%;
+		height: 70%;
 	}
+
+
+	#about-title {
+		font-size: 35px;
+	}
+
+	#dev-img {
+		width: 50%;
+		margin: 0 auto;
+	}
+
+
+
+
+
+
+
+
+
+	input[id=projects]:checked ~ #cprojects .capstone2 {
+		animation-name: fadeInRight;
+		animation-duration: 0.5s;
+	}
+
+	input[id=projects]:not(:checked) ~ #cprojects .capstone2 {
+		animation-name: fadeOutRight;
+		animation-duration: 0.5s;
+		animation-delay: 0.1s;
+	}
+
+	input[id=projects]:checked ~ #cprojects .capstone3 {
+		animation-name: fadeInLeft;
+		animation-duration: 0.5s;
+	}
+
+	input[id=projects]:not(:checked) ~ #cprojects .capstone3 {
+		animation-name: fadeOutLeft;
+		animation-duration: 0.5s;
+		animation-delay: 0.1s;
+	}
+
+
+
+
+
+
 }
+
+
