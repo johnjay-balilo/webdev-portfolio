@@ -135,12 +135,12 @@ input[id=projects]:not(:checked) ~ #cprojects .alvender {
 	animation-delay: 0.1s;
 }
 
-input[id=projects]:checked ~ #cprojects .capstone2 {
+input[id=projects]:checked ~ #cprojects .bodega {
 	animation-name: fadeInDown;
 	animation-duration: 0.5s;
 }
 
-input[id=projects]:not(:checked) ~ #cprojects .capstone2 {
+input[id=projects]:not(:checked) ~ #cprojects .bodega {
 	animation-name: fadeOutDown;
 	animation-duration: 0.5s;
 	animation-delay: 0.1s;
@@ -312,12 +312,12 @@ nav > a:hover {
 
 
 
-	input[id=projects]:checked ~ #cprojects .capstone2 {
+	input[id=projects]:checked ~ #cprojects .bodega {
 		animation-name: fadeInRight;
 		animation-duration: 0.5s;
 	}
 
-	input[id=projects]:not(:checked) ~ #cprojects .capstone2 {
+	input[id=projects]:not(:checked) ~ #cprojects .bodega {
 		animation-name: fadeOutRight;
 		animation-duration: 0.5s;
 		animation-delay: 0.1s;
