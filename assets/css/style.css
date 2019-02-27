@@ -257,6 +257,14 @@ nav > a:hover {
 		left: 10%;
 	}
 
+	#cprojects {
+		position: fixed;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		margin-bottom: 30%;
+		height: 70%;
+	}
+
 
 
 
