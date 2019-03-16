@@ -17,7 +17,7 @@ body {
 }
 
 #contents {
-	background-color: rgba(255, 255, 255, 0.5);
+	background-color: rgba(255, 255, 255, 0.6);
 	height: 80vh;
 	margin-top: 10vh;
 	width: 100%;
@@ -39,7 +39,25 @@ body {
 	width: 50%;
 	top: 20%;
 	left: 25%;
-	background-color: rgba(255, 255, 255, 0.6);
+	background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+#cprojects .card {
+	max-height: 95%;
+	overflow-y: hidden;
+}
+
+#cprojects {
+	position: fixed;
+	overflow-x: hidden;
+	/*overflow-y: hidden;*/
+	margin-bottom: 30%;
+	height: 70%;
+}
+
+.text-justify {
+	font-size: 1.2em;
 }
 
 
@@ -257,7 +275,8 @@ nav > a:hover {
 		left: 10%;
 	}
 
-	#cprojects {
+	#cprojects,
+	#cabout {
 		position: fixed;
 		overflow-x: hidden;
 		overflow-y: scroll;
@@ -291,7 +310,8 @@ nav > a:hover {
 		margin-bottom: 5%;
 	}
 
-	#cprojects {
+	#cprojects,
+	#cabout {
 		position: fixed;
 		overflow-x: hidden;
 		overflow-y: scroll;
